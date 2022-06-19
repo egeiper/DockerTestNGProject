@@ -16,7 +16,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                	app = docker.build("egeiper/selenium-testng","--platform linux/amd64")
+                	app = docker.build("egeiper/selenium-testng")
                 }
             }
         }
