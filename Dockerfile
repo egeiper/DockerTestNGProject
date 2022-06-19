@@ -1,4 +1,4 @@
-FROM openjdk:8u191-jre-alpine3.8
+FROM --platform=linux/amd64 openjdk:8u191-jre-alpine3.8
 WORKDIR /usr/share/alpineDirectory
 
 # for the delay while registration node

@@ -4,7 +4,7 @@ pipeline {
         stage('Build Jar') {
             agent {
                 docker {
-                    image 'amd64/maven:3-eclipse-temurin-18-alpine'
+                    image 'maven:3-alpine'
                     args '-v /root/.m2:/root/.m2'
                 }
             }
@@ -15,7 +15,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                	app = docker.build("egeiper/selenium-testng","--platform=linux/amd64")
+                	app = docker.build("egeiper/selenium-testng")
                 }
             }
         }
