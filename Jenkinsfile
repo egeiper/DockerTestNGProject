@@ -4,7 +4,7 @@ pipeline {
         stage('Build Jar') {
             agent {
                 docker {
-                    image 'maven:3-alpine'
+                    image 'amd64/maven:3-eclipse-temurin-18-alpine'
                     args '-v /root/.m2:/root/.m2'
                 }
             }
