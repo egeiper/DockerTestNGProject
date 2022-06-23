@@ -67,7 +67,6 @@
                         <configuration>
                             <outputDirectory>
                                 ${project.build.directory}/libs
-                                ${project.build.directory}/allure-results
                             </outputDirectory>
                         </configuration>
                     </execution>

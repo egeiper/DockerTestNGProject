@@ -23,7 +23,7 @@ services:
         - HUB_HOST=hub
         - MODULE=login.xml
       volumes:
-        - ./outputDocker:/usr/share/alpineDirectory/allure-results
+        - ./outputDocker:/usr/share/alpineDirectory/test-output
     navigate:
       image: egeiper/selenium-testng
       depends_on:
@@ -32,7 +32,7 @@ services:
         - HUB_HOST=hub
         - MODULE=navigate.xml
       volumes:
-        - ./outputDocker:/usr/share/alpineDirectory/allure-results
+        - ./outputDocker:/usr/share/alpineDirectory/test-output
 
 
 
